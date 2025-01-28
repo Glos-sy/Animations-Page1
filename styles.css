@@ -1,0 +1,137 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+/* HEADER STYLING */
+header {
+    background-color: #f9fff3;
+    padding: 3rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 4rem;
+    color: #0d1a01;
+    position: relative;
+    /* color:#f4feea; */
+}
+
+header nav {
+    width: 30%;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header li {
+    list-style-type: none;
+}
+
+header a {
+    text-decoration: none;
+    font-size: 2rem;
+    color: black;
+}
+
+header input {
+    padding: 2rem 1.5rem;
+    background-color: transparent;
+    font-size: 1.7rem;
+    border-radius: 30px;
+}
+
+header input:hover {
+    background: linear-gradient(to left, #152901, #62bc08);
+    cursor: pointer;
+    border-color: white;
+    color: white;
+}
+
+/* ANIMATIONS */
+/* @keyframes button-flip {
+    0%{
+        tra
+    }
+    100%{}
+} */
+
+
+/* HERO STYLING */
+#hero {
+    width: 100%;
+    position: relative;
+}
+
+#hero img {
+    width: 100%;
+    height: 100rem;
+}
+
+#hero .overlay {
+    width: 100%;
+    height: 100rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+}
+
+#hero .hero-txt {
+    position: relative;
+    bottom: 65rem;
+    /* left: 70rem; */
+    z-index: 1;
+}
+
+#hero .hero-txt h1 {
+    font-size: 13rem;
+    text-align: center;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+#hero .hero-txt p {
+    font-size: 4rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* #hero .hero-txt p::before {
+    height: 5rem;
+    width: 3rem;
+    background-color: yellow;
+    z-index: 1;
+    content: "";
+} */
+
+#hero .hero-txt p::before {
+    height: 5rem;
+    width: 10rem;
+    background-color: yellow;
+}
+
+
+/* SECTION ONE STYLING */
+#one {
+    background-color: #f4feea;
+    margin-top: -5rem;
+}
+
+#one img {
+    width: 20%;
+}
+
+#one h2 {
+    font-size: 3rem;
+}
