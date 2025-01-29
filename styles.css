@@ -11,7 +11,7 @@ html {
 /* HEADER STYLING */
 header {
     background-color: #f9fff3;
-    padding: 3rem 4rem;
+    padding: 3rem 5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,10 +19,33 @@ header {
 }
 
 header h1 {
-    font-size: 4rem;
-    color: #0d1a01;
+    font-size: 6rem;
+    color: #152408;
     position: relative;
     /* color:#f4feea; */
+}
+
+header h1:hover {
+    background-image: linear-gradient(#112201, #182808, #48860a 80%);
+    background-size: cover;
+    background-clip: text;
+    color: transparent;
+    cursor: pointer;
+    animation: logo-jump 2s ease-in-out backwards infinite;
+}
+
+/* ANIMATION */
+@keyframes logo-jump {
+    0%{
+        transform: rotate('180deg');
+        transform: scale(0.9);
+        opacity: 0.9;
+    }
+    100%{
+        transform: rotateX(none);
+        transform: scale(1, 1);
+        opacity: 1;
+    }
 }
 
 header nav {
@@ -41,31 +64,24 @@ header li {
 
 header a {
     text-decoration: none;
-    font-size: 2rem;
-    color: black;
+    font-size: 2.5rem;
+    color: #152408;
+    font-weight: bold;
+}
+
+header a:hover {
+    background-image: linear-gradient(to right, #112201, #182808, #48860a 70%);
+    background-size: cover;
+    background-clip: text;
+    color: transparent;
 }
 
 header input {
-    padding: 2rem 1.5rem;
+    padding: 2rem 2rem;
     background-color: transparent;
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     border-radius: 30px;
 }
-
-header input:hover {
-    background: linear-gradient(to left, #152901, #62bc08);
-    cursor: pointer;
-    border-color: white;
-    color: white;
-}
-
-/* ANIMATIONS */
-/* @keyframes button-flip {
-    0%{
-        tra
-    }
-    100%{}
-} */
 
 
 /* HERO STYLING */
@@ -77,6 +93,7 @@ header input:hover {
 #hero img {
     width: 100%;
     height: 100rem;
+    position: relative;
 }
 
 #hero .overlay {
@@ -85,6 +102,30 @@ header input:hover {
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
     top: 0;
+    animation: overlay-image-down-slide 3s 0.5s ease forwards;
+}
+
+/* ANIMATION */
+@keyframes overlay-image-down-slide {
+    0% {
+        height: 20rem;
+        opacity: 0.7;
+    }
+    /* 25% {
+        height: 40rem;
+        opacity: 0.8;
+    }
+    75% {
+        height: 80rem;
+    } */
+    50% {
+        height: 60rem;
+        opacity: 0.9;
+    }
+    100%{
+        height: 100rem;
+        opacity: 1;
+    }
 }
 
 #hero .hero-txt {
@@ -92,6 +133,7 @@ header input:hover {
     bottom: 65rem;
     /* left: 70rem; */
     z-index: 1;
+    text-align: center;
 }
 
 #hero .hero-txt h1 {
@@ -99,26 +141,82 @@ header input:hover {
     text-align: center;
     color: white;
     margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #hero .hero-txt p {
     font-size: 4rem;
-    text-align: center;
     color: #ffffff;
+    position: relative;
+    text-align: center;
+    position: relative;
 }
 
-/* #hero .hero-txt p::before {
-    height: 5rem;
-    width: 3rem;
-    background-color: yellow;
-    z-index: 1;
+#hero .hero-txt p:hover {
+    cursor: pointer;
+}
+
+#hero .hero-txt p::after {
     content: "";
-} */
+    width: 4%;
+    height: 0.55rem;
+    background-color: white;
+    position: absolute;
+    bottom: -1.7rem;
+    right: 85rem;
+}
+
+#hero .hero-txt p:hover::after {
+    background: linear-gradient(to right, #2c4f0c, #182808, #67b31c 70%);
+    cursor: pointer;
+    animation: underline-slide 1.5s ease-in-out infinite;
+}
+
+/* ANIMATIONS */
+@keyframes underline-slide {
+    0%{
+        opacity: 0.7;
+    }
+    50%{
+        opacity: 0.9;
+        width: 11%;
+        right: 80rem;
+    }
+    100%{
+        opacity: 1;
+        width: 19%;
+        right: 72.8rem;
+    }
+}
+
 
 #hero .hero-txt p::before {
     height: 5rem;
     width: 10rem;
     background-color: yellow;
+}
+
+#hero i {
+    color: white;
+    font-size: 5rem;
+    position: relative;
+    top: -30rem;
+    left: 89rem;
+    animation: arrow-jump 0.9s linear infinite;
+}
+
+/* ANIMATIONS */
+@keyframes arrow-jump {
+    0% {
+        opacity: 0.6;
+        top: -29rem;
+    }
+    100% {
+        opacity: 1;
+        top: -30rem;
+    }
 }
 
 
@@ -134,4 +232,19 @@ header input:hover {
 
 #one h2 {
     font-size: 3rem;
+}
+
+
+.try {
+    width: 10rem;
+    height: 10rem;
+    border: 1px solid black;
+    margin: 0 auto;
+    margin-bottom: 10rem;
+}
+
+.try:hover {
+    cursor: pointer;
+    background-color: red;
+    transform: rotate(180deg);
 }
